@@ -3,51 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 1. Page Title -->
     <title>About Me & Cloud Computing Basics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #090a0f;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --card-hover-border: rgba(255, 255, 255, 0.18);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 4rem 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 680px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        header {
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #ffffff;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: var(--card-hover-border);
+        }
+
+        p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .meta-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+        }
+
+        li {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        li strong {
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+            color: #ffffff;
+        }
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--accent);
+            text-shadow: 0 0 12px var(--accent-glow);
+        }
+    </style>
 </head>
 <body>
 
-    <!-- 2. Main Heading -->
-    <h1>My First HTML Webpage</h1>
+    <main class="container">
+        <!-- 2. Main Heading -->
+        <header>
+            <h1>My First HTML Webpage</h1>
+        </header>
 
-    <!-- 3. About Me Section -->
-    <h2>About Me</h2>
-    <p><strong>Name:</strong> Mark Costin </p>
-    <p><strong>Course/Program:</strong> BS Computer Science </p>
-    <p><strong>Description:</strong> Hello! I am currently learning the basics of HTML web development. I am excited to build my first properly structured webpage and learn more about technology.</p>
+        <!-- 3. About Me Section -->
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="meta-list">
+                <p><strong>Name:</strong> Mark Costin</p>
+                <p><strong>Course/Program:</strong> BS Computer Science</p>
+            </div>
+            <p>Hello! I am currently learning the basics of HTML web development. I am excited to build my first properly structured webpage and learn more about technology.</p>
+        </section>
 
-    <!-- 4. Cloud Computing Section -->
-    <h2>Cloud Computing</h2>
-    <p><strong>What is Cloud Computing?</strong><br>
-    Cloud computing is the delivery of computing services over the internet rather than on a local computer or hard drive. This means you can access storage, software, databases, and servers remotely, allowing for flexibility, lower costs, and easy access to data from anywhere.</p>
+        <!-- 4. Cloud Computing Section -->
+        <section class="card">
+            <h2>Cloud Computing</h2>
+            <p><strong>What is Cloud Computing?</strong></p>
+            <p>Cloud computing is the delivery of computing services over the internet rather than on a local computer or hard drive. This means you can access storage, software, databases, and servers remotely, allowing for flexibility, lower costs, and easy access to data from anywhere.</p>
+        </section>
 
-    <!-- 5 & 6. Cloud Services Section with an HTML List -->
-    <h2>Cloud Services I Know</h2>
-    <p>Here are three popular cloud computing services and applications:</p>
-    
-    <!-- 6. List -->
-    <ul>
-        <li>
-            <strong>Google Workspace (Google Drive/Docs):</strong> 
-            A cloud-based software service used for online file storage, document creation, and real-time collaboration.
-        </li>
-        <li>
-            <strong>Amazon Web Services (AWS):</strong> 
-            A comprehensive cloud platform that provides businesses with virtual servers, storage, and databases to run their websites and applications.
-        </li>
-        <li>
-            <strong>Linode:</strong> 
-            The best cloud computing services! (period).
-        </li>
-    </ul>
+        <!-- 5 & 6. Cloud Services Section with an HTML List -->
+        <section class="card">
+            <h2>Cloud Services I Know</h2>
+            <p>Here are three popular cloud computing services and applications:</p>
+            <ul>
+                <li>
+                    <strong>Google Workspace (Google Drive/Docs)</strong>
+                    A cloud-based software service used for online file storage, document creation, and real-time collaboration.
+                </li>
+                <li>
+                    <strong>Amazon Web Services (AWS)</strong>
+                    A comprehensive cloud platform that provides businesses with virtual servers, storage, and databases to run their websites and applications.
+                </li>
+                <li>
+                    <strong>Linode</strong>
+                    The best cloud computing services! (period).
+                </li>
+            </ul>
+        </section>
 
-    <!-- 7. Link -->
-    <h2>Learn More</h2>
-    <p>
-        If you want to read more about this topic, visit this link: 
-        <a href="https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-cloud-computing" target="_blank">Microsoft Azure: What is Cloud Computing?</a>
-    </p>
+        <!-- 7. Link -->
+        <section class="card">
+            <h2>Learn More</h2>
+            <p>
+                If you want to read more about this topic, visit this link:
+                <a href="https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-cloud-computing" target="_blank" rel="noopener noreferrer">Microsoft Azure: What is Cloud Computing? &rarr;</a>
+            </p>
+        </section>
+    </main>
 
 </body>
 </html>
